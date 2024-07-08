@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>alkis-fridge</title>
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    
+ <link rel="shortcut icon" type="image/png/gif" href="recursos/anima_pr.gif">
+ <!-- BT4 -->
+ <link rel="stylesheet" href="bootstrap.min.css">
+ <!-- fuentes 5.7 -->
+ <link href="https://fonts.googleapis.com/css?family=Bangers&display=swap" rel="stylesheet">
+ <!-- la siracha -->
+ <link href="https://fonts.googleapis.com/css?family=Sriracha&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+    <style>
+        body,html{background:#61493908}#grid{margin:0;padding:30px 10px}#barra{background-color:#dee66d;padding:10px;border-bottom-left-radius:10px;border-bottom-right-radius:10px}#barra span{font-size:1.76rem;padding:5px;width:30%;text-align:center;color:#fff;margin:4px 10px;font-family:Bangers,cursive;text-shadow:5px 1px 5px #000;box-shadow:3px 4px 10px #444}.botonBarra{width:10%;margin:10px 10px;background-color:#fff;color:#000;text-decoration:wavy;text-transform:uppercase;font-weight:400;font-family:Bangers,cursive;font-size:1.34rem}#barra input{width:40%;height:50px;margin:4px 10px;padding-left:10px;font-size:1.45rem;font-family:Bangers,cursive}.card{width:97%;margin:10px 10px;padding:0 0 10px 0;min-height:345px;max-height:400px;background-color:#fff}.card img{width:83%;height:189px;padding:0;display:block;margin:0 auto;box-shadow:2px 5px 18px #444}.card p{font-size:1.17rem;margin-top:20px;text-align:center;font-weight:400;font-family:Bangers,cursive}.card a{background-color:#fff;width:50%;margin-bottom:10px;border-color:#000;margin:0 auto;position:relative;color:#444}#display{background-color:#fff;width:80%;margin:0 auto;padding:30px 20px}#banner{background-color:#dee66d;min-height:200px;display:block;padding:20px auto;border-radius:4px;margin:20px 0;box-shadow:1px 3px 20px #444}#bannerLink{background-color:#fff;font-size:1.56rem;border-radius:4px;font-family:Bangers,cursive;box-shadow:2px 3px 20px #444}#opciones{margin:25px 0}#opciones img{border-bottom-left-radius:4px;border-bottom-right-radius:4px;box-shadow:none;border:1px outset #444}#opciones h2{text-align:center;font-size:2.15rem;margin:30px auto;font-family:Bangers,cursive}#opciones .card{box-shadow:1px 1px 7px #444;background-color:#fff}#opciones h3{text-align:center;margin:11px auto;font-size:1.17rem;font-family:Bangers,cursive}#opciones a{display:block;position:relative;width:60%;margin:11px auto;font-size:1.17rem;font-family:Bangers,cursive}#footer{background-color:#dee66d;border-top-left-radius:4px;border-top-right-radius:4px;padding:20px 10px 10px 10px;box-shadow:3px 4px 10px #444}#footer a{color:#fff;text-shadow:1px 2px 6px #000;width:100%;margin:0 auto;text-align:center}@media (max-width:720px){#barra{height:110px}#barra span{width:20%!important;font-size:1.34rem}#barra input{width:40%!important}#botonBarra{width:20%!important}#homeButton{display:none}}
+    </style>
+
+    
+<!-- fin de la barra de contenedor -->
+ <div id="barra" class="container">
+     <div class="row">
+         <span>Vivart's-Fridge</span>
+         <a href="index.html#!" id="homeButton"  class="btn botonBarra" type="button">Casa</a>
+         <input type="text" id="target" value="avocado" placeholder="ingredient">
+         <a href="#!" class="btn botonBarra" type="button" id="lanzar">Buscar</a>
+     </div>
+ </div>
+
+ <!-- landing page -->
+ <div id="landing" class="container">
+
+     <!-- <div id="banner" class="jumbotron">
+            <div class="row">
+                <div class="col-sm-1 col-md-6 col-lg-6">
+                         <img src="" alt="banner" id="bannerImage">
+                </div>
+                <div id="ingredientes" class="col-sm-1 col-md-6 col-lg-6>
+                      <h3 id="bannerTitulo">Titulo</h3>
+                      <a href="#!" id="bannerLink" class="btn">look up recipe</a>
+                </div>
+            </div>    
+     </div> -->
+     <!-- fin del banner -->
+
+     <div id="opciones" class="container">
+        <div class="row">
+             <h2>Opciones Vegetarianas</h2>
+        </div>
+        <!-- fin de la row -->
+
+         <div id="wrapRandomRecipes" class="row">
+
+            <div id="" class="col-sm-1 col-md-3 col-lg-3">
+                <div class="card">
+                    <div class="card-image">
+                        <img src="" alt="imagen" class="card-image">
+                    </div>
+                    <div class="card-content">
+                         <h3>Titulo</h3>
+                         <a href="#!" class="btn">Ver receta</a>
+                    </div>    
+                </div>
+            </div>
+            <!-- fin de la columna -->
+
+            <div class="col-sm-1 col-md-3 col-lg-3">
+                <div class="card">
+                    <div class="card-image">
+                        <img src="" alt="imagen" class="card-image">
+                    </div>
+                    <div class="card-content">
+                         <h3>Titulo</h3>
+                         <a href="#!" class="btn">Ver receta</a>
+                    </div>    
+                </div>
+            </div>
+            <!-- fin de la columna -->
+
+            <div class="col-sm-1 col-md-3 col-lg-3">
+                <div class="card">
+                    <div class="card-image">
+                        <img src="" alt="imagen" class="card-image">
+                    </div>
+                    <div class="card-content">
+                         <h3>Titulo</h3>
+                         <a href="#!" class="btn">Ver receta</a>
+                    </div>    
+                </div>
+            </div>
+            <!-- fin de la columna -->
+
+            <div class="col-sm-1 col-md-3 col-lg-3">
+                <div class="card">
+                    <div class="card-image">
+                        <img src="" alt="imagen" class="card-image">
+                    </div>
+                    <div class="card-content">
+                         <h3>Titulo</h3>
+                         <a href="#!" class="btn">Ver receta</a>
+                    </div>    
+                </div>
+            </div>
+            <!-- fin de la columna -->
+
+         </div>
+         <!-- find e la row -->
+
+     </div>
+     <!-- find e las opciones -->
+
+ </div>
+
+  <!--  el grid  -->
+   <div id="wrap" class="">
+        <div id="grid" class="row">  
+        </div>
+   </div>   
+
+   <div id="footer"  class="container">
+    <div class="row">
+         <div class="col">
+             <a  href="#!">
+                 <h5 style="text-aling : center; font-family: 'Bangers', cursive;">Sergio Vivart - 2020.</h5>
+             </a>
+         </div>
+    </div>
+</div>
+<!-- find del footer -->
+
+   <!-- // cargamos los scripts -->
+   <script defer src="jquery.js"></script>
+   <script defer src="bootstrap.min.js"></script>
+   
+   <!-- el script minificado de metarecipes api -->
+   <script>
+    const doc=document,grid=doc.getElementById("grid"),landing=doc.getElementById("landing");let lanzar=doc.getElementById("lanzar"),target=doc.getElementById("target"),home=doc.getElementById("homeButton");home.onclick=function(){window.location.href="alkis-fridge.html"};let randRecipes=doc.querySelectorAll(".card");const llave="&apiKey=e586395a35724ee281df6fbc348f79e0",numero=5;function getData(URL,callback){var xhttp=new XMLHttpRequest;xhttp.onreadystatechange=function(){if(4==this.readyState&&200==this.status&&callback(JSON.parse(this.responseText)),402==this.status){let mesage=doc.createElement("p");mesage.textContent="No more API calls left for today. Better luck next time.",mesage.style.fontFamily="'Bangers', cursive",mesage.style.fontSize="2.1rem",mesage.style.margin="30px auto",mesage.style.textAlign="center",landing.textContent="",landing.appendChild(mesage)}},xhttp.open("GET",URL,!0),xhttp.setRequestHeader("Content-Type","application/json"),xhttp.send()}function crear_item(id,image,title,callback){let wrap=doc.createElement("div");wrap.classList.add("col-sm-12"),wrap.classList.add("col-lg-3");let card=doc.createElement("div");card.id=id,card.classList.add("card");let cardImage=doc.createElement("div");cardImage.classList.add("card-image");let img=doc.createElement("img");img.src=image,img.alt="receta",cardImage.appendChild(img);let cardContent=doc.createElement("div");cardContent.classList.add("card-content");let p=doc.createElement("p");p.textContent=title,cardContent.appendChild(p);let link=doc.createElement("a");link.classList.add("linkReceta"),link.classList.add("btn"),link.style.margin="10px auto",link.href="https://api.spoonacular.com/recipes/"+id+"/information?includeNutrition=false"+llave,link.type="button",link.textContent="ver receta",card.appendChild(cardImage),card.appendChild(cardContent),card.appendChild(link),wrap.append(card),callback(wrap)}function hacerDisplay(item,callback){let flex=doc.createElement("div");flex.id="display",flex.classList.add("border"),flex.style.boxShadow="2px 5px 12px #444";let img=doc.createElement("img");img.src=item.image,img.classList.add("imgDisplay"),img.style.width="80%",img.style.display="block",img.style.boxShadow="2px 5px 12px #444",img.style.margin="0 auto";let titulo=doc.createElement("h2");titulo.classList.add("card-title"),titulo.textContent=item.title,titulo.style.margin="17px 0",titulo.style.textAlign="center",titulo.style.fontSize="2.23rem",titulo.style.fontFamily="'Bangers', cursive";let cPlacas=doc.createElement("div");cPlacas.style.margin="20px 10px",item.diets.forEach(ele=>{let placaDietas=doc.createElement("span");placaDietas.textContent=ele.toString(),placaDietas.classList.add("badge"),placaDietas.classList.add("badge-pill"),placaDietas.style.backgroundColor="#dee66d",placaDietas.style.fontSize="1.23rem",placaDietas.style.padding="12px 20px",placaDietas.style.margin="7px",placaDietas.style.fontFamily="'Sriracha', cursive",cPlacas.appendChild(placaDietas)});let salud=doc.createElement("h3");salud.style.fontFamily="'Sriracha', cursive",salud.textContent="Health Score : "+item.salud;let tiempo=doc.createElement("h3");tiempo.style.fontFamily="'Sriracha', cursive",tiempo.textContent="Prep Time : "+item.minutos+" minutes.";let ingWrap=doc.createElement("div");ingWrap.classList.add("row"),ingWrap.style.margin="20px",ingWrap.style.padding="20px",ingWrap.style.borderRadius="4px",ingWrap.style.backgroundColor="rgba(113, 116, 120, 0.07)";let ingTitle=doc.createElement("h3");ingTitle.style.fontSize="2.4rem",ingTitle.style.margin="20px auto",ingTitle.style.textAlign="center",ingTitle.textContent="Ingridients.",ingTitle.style.fontFamily="'Bangers', cursive",item.ingredientes.forEach((ele,index)=>{let columna=doc.createElement("div");columna.classList.add("col-sm-6"),columna.classList.add("col-lg-2");let ingrediente=doc.createElement("p");ingrediente.textContent=(index+1).toString()+") "+ele.originalName.toString()+".",ingrediente.style.fontFamily="'Sriracha', cursive",ingrediente.style.backgroundColor="#dee66d",ingrediente.style.textAlign="center";let img=doc.createElement("img");img.src="https://spoonacular.com/cdn/ingredients_100x100/"+ele.image,columna.appendChild(ingrediente),columna.appendChild(img),ingWrap.appendChild(columna)});let instructions=doc.createElement("div");instructions.classList.add("card-content");let preparacion=doc.createElement("h3");preparacion.textContent="Preparation steps.",preparacion.style.fontFamily="'Bangers', cursive",preparacion.style.margin="20px auto",preparacion.style.textAlign="center";let contenido=doc.createElement("p");contenido.textContent=item.instructions,contenido.style.fontFamily="'Sriracha', cursive",contenido.fontSize="2.4rem",contenido.style.margin="20px auto",contenido.style.padding="10px 15px",instructions.appendChild(preparacion),instructions.appendChild(contenido),item.aInstruction.forEach(ele=>{ele.steps.forEach(step=>{console.log(step.step)})}),flex.appendChild(img),flex.appendChild(titulo),flex.appendChild(cPlacas),flex.appendChild(salud),flex.appendChild(tiempo),flex.appendChild(ingTitle),flex.appendChild(ingWrap),flex.appendChild(instructions),callback(flex)}getData("https://api.spoonacular.com/recipes/random?number=5&tags=vegetarian"+llave,data=>{data.recipes.forEach((ele,index)=>{randRecipes[index].querySelector("img").src=ele.image,randRecipes[index].querySelector("h3").textContent=ele.title;let link=randRecipes[index].querySelector("a");link.href="https://api.spoonacular.com/recipes/"+data.recipes[index].id+"/information?includeNutrition=false"+llave,link.classList.add("linkReceta")})}),lanzar.addEventListener("click",e=>{let id,URL;landing.style.display="none",grid.innerHTML="",getData("https://api.spoonacular.com/recipes/search?query="+target.value+"&number="+5..toString()+llave,res=>{console.log(res);let recetas=res.results,base=res.baseUri;recetas.forEach(ele=>{crear_item(ele.id,base+ele.image,ele.title,card=>{grid.append(card)})})})}),doc.addEventListener("click",ele=>{if(ele.target.classList.contains("linkReceta")){let URL;landing.style.display="none",getData(ele.target.href,res=>{let obj;hacerDisplay({id:res.id,image:res.image,title:res.title,diets:res.diets,salud:res.healthScore,instructions:res.instructions,aInstruction:res.analyzedInstructions,minutos:res.readyInMinutes,ingredientes:res.extendedIngredients},data=>{grid.innerHTML="",grid.append(data)})}),ele.preventDefault()}else ele.preventDefault()});
+  </script>
+
+</body>
+</html>

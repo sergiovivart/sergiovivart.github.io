@@ -1,0 +1,85 @@
+/* // todo tendra la fuente de la langosta.  */
+* {
+    font-family: 'Lobster', cursive !important;
+}
+
+/* #coolikify {
+    background : #00000042;
+    border: 1px solid rgb(136, 109, 109);
+*/
+
+.goback {
+    text-align: center;
+    font-size: 1.23rem;
+    color: #fff;
+    position: relative;
+    font-family: 'Lobster', cursive;
+    margin : 0 auto;
+}
+
+.mensaje { z-index: 9999 !important; }
+
+h2 {
+    text-align: center;
+    font-size : 2.67rem;
+    color: #fff;
+    margin: 30px 10px;
+    text-shadow: 1px 2px 8px #000;
+}
+
+#grid {
+    padding: 10px;
+}
+
+.targetas {
+    background-color: white;
+    min-height: 325px;
+    padding: 0;
+    box-shadow : 1px 2px 6px #000;
+    border: 1px solid rgb(136, 109, 109);
+}
+
+img {
+    width: 80%;
+    padding: 0;
+    height: 200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    box-shadow: 1px 1px 1px #000;
+}
+
+h3 {
+    text-align: center;
+    font-size : 1.67rem;
+    color: #000;
+    text-shadow: none;
+    padding: 5px;
+    margin: 14px auto;
+}
+
+.badge {
+    display: inline-block;
+    font-size: 1.12rem;
+    margin: 4px 4px 4px 9px;
+    border-radius: 4px;
+    padding: 5px;
+    text-align: center;
+    background-color: purple;
+    font-weight: 400;
+    /* text-transform: lowercase; */
+}
+
+p {
+    font-size: 1.14rem;
+    display: block;
+    margin: 19px;
+    text-align: left;
+    text-transform: uppercase;
+}
+
+h5 {
+    color: #fff;
+    text-shadow: 1px 2px 8px #000;
+}

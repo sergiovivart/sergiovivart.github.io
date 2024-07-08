@@ -1,0 +1,101 @@
+ /* la parte con  todo lo del video */
+
+/* (( go abck button)) */
+.goback {
+    text-align: center;
+    font-size: 1.23rem;
+    color: #fff;
+    position: relative;
+    font-family: 'Lobster', cursive;
+    margin : 0 auto;
+}
+
+/* // el titulo */
+h3,.titulo {
+    text-align: center;
+    font-size : 2.3rem;
+    color: #fff;
+    text-shadow: 2px 4px 12px #444;
+    margin: 30px 10px;
+    font-family: 'Lobster', cursive;
+}
+
+/* las imagenes */
+.app {
+    display: block;
+    text-align: center;
+    margin : 0 auto;
+    width: 30%;
+    border-radius: 10px;
+}
+
+/* // el item */
+.appItem {
+    color: #000;
+    height: 155px;
+    padding: 12px;
+    margin: 20px 10px;
+    border-radius: 4px;
+    box-shadow : 1px 2px 6px #000;
+    border: 1px solid rgb(136, 109, 109);
+    background : #fff;
+}
+
+.appItem:hover {
+    box-shadow: 3px 5px 15px #fff;
+}
+
+.appItem img {
+    width: 95%;
+    height: 100px;
+    display: block;
+    margin : 0 auto;
+    padding : 0;
+    border-radius: 10px;
+    /* box-shadow : 4px 7px 6px #000; */
+
+}
+
+.appItem h3 {
+  margin: 0;
+  color: #000;
+  text-shadow: 1px 1px 7px #fff;
+}
+
+.appItem p {
+    text-align: center;
+    margin : 0 auto;
+    color : #000;
+    text-shadow: 1px 1px 7px #fff;
+    font-family: 'ZCOOL QingKe HuangYou', cursive;
+    font-size: 0.97rem;
+}
+
+/* un media query */
+ /* On screens that are 992px or less, set the background color to blue */
+@media screen and (max-width: 992px) {
+
+    .titulo {
+        font-size: 1.45rem;
+        margin: 10px auto;
+    }
+
+   img {
+       width: 63%;
+   }
+
+   .appItem {
+    height: 155px;
+   }
+
+   .appItem h3 {
+    font-size: 1.46rem;
+   }
+
+   .appItem p {
+    text-align: justify;
+    font-size: 0.96rem;
+   }
+
+
+}

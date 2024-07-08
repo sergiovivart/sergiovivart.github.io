@@ -1,0 +1,95 @@
+<!doctype html>
+<html class="no-js" lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    
+    <title>Sergio Vivart</title>
+    <link rel="shortcut icon" type="image/png/gif" href="recursos/anima_pr.gif">
+    <link href="https://fonts.googleapis.com/css?family=Lobster|Poppins|ZCOOL+QingKe+HuangYou&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+     <!-- los estilos -->
+     <link rel="stylesheet" href="css/foundation.css">
+     <link rel="stylesheet" href="css/contact.css?v=001010101010">
+     <!-- <link rel="stylesheet" href="css/articles.css?v=001010101010"> -->
+     <link rel="stylesheet" href="css/anima.css?v=001010101010">
+  
+</head>
+<body class="animaBack">
+
+<div class="row">
+   <div class="column">
+       <a class="goback" href="index.html"><<<</a> 
+   </div>
+</div>
+
+<div class="row column">
+    <h3>Enviame un mensaje privado.</h3>
+</div>
+
+<div id="contact">
+     <form id="formaContacto" class="form" action="tools/inContact.php" method="post">
+        <label for="nombre">
+            <input  type="text" name="nombre" class="verified" placeholder="Nombre">
+        </label>
+        <label for="correo">
+          <input  type="email" name="correo" class="verified"  placeholder="Email">
+            </label>
+        <label for="mensaje">
+            <textarea name="mensaje" class="verified" style="height: 157px;" id="texto_propuesta" placeholder="Mensaje..."></textarea>
+        </label>
+
+        <div class="row" style="margin-bottom: 20px;">
+          <div class="small-5 medium-6 large-6 column">
+            <img style="margin : 0 auto;" src="https://qph.cf2.quoracdn.net/main-qimg-25f4af317355179f60f0229018308205-lq" alt="captcha" width="" height="50">
+          </div>
+          <div class="small-7 medium-6 large-6 column">
+            <!-- <label for="captcha">Captcha</label> -->
+            <input type="text" name="captcha" class="verified" placeholder="">
+          </div>
+        </div>
+
+        <button id="btnSubir" type="submit" class="button default">Enviar</button>
+
+     </form>
+     <!-- find e la forma -->
+</div>
+<!-- fin de la forma de contacto -->
+
+<!-- <div class="row column">
+  <h5 style="color : #fff; margin : 12px; text-align: center; font-size: 1.12rem; font-family: serif;" >Todos los derechos reservados - 2022.</h5>
+</div> -->
+
+  <!-- fin del contenedor -->
+  <script defer src="js/vendor/jquery.js"></script>
+  <script defer src="js/vendor/foundation.js"></script>
+  <script defer>$(document).foundation();</script>
+
+<script>
+// let formaContacto = doc.getElementById('#formaContacto')
+// let btnContact = doc.getElementById('btnSubir')
+// let cuenta = 0;
+// (( en caso de clic verificamos que todo lso campos tengnas contenido))
+// btnContact.addEventListener('click', (e)=>{
+//   verified.forEach( (ele) => {
+//     if(ele.value.trim() == '')
+//        {
+//          ele.style.border = '1px solid orangered';
+//           e.preventDefault();  // prevenimos
+//           cuenta++;
+//        } else {
+//         ele.style.border = '1px solid green';
+//        }       
+//   })
+// })
+
+</script>
+
+
+</body>
+</html>

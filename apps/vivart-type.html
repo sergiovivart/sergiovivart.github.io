@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    
+    <title>Vivart-type</title>
+    <link rel="shortcut icon" type="image/png/gif" href="recursos/anima_pr.gif">
+    <link rel="stylesheet" href="bulma.css" >
+    <link rel="stylesheet" href="alki-type.css">
+    <!-- las fuentas -->
+    <link href="https://fonts.googleapis.com/css?family=Anton|Roboto+Mono&display=swap" rel="stylesheet">
+</head>
+<body>  
+
+    <style>
+        
+        #app {
+            min-height: 500px;
+            margin : 0 auto;
+            padding: 30px 32px;
+        }
+        #pContenedor {
+            margin : 22px auto;
+            text-align: left;
+            padding: 16px;
+            font-family: 'Roboto Mono', monospace;
+        }
+        #pContenedor span {
+            transition: all 320ms ease-in-out !important;
+        }
+        .column {
+            min-height: 250px;
+            margin : 20px auto;
+            padding: 30px 30px;
+            background: #67c7b940;
+            border-radius: 10px;
+            margin: 10px;
+            font-weight: 400;
+            font-size: 1.2rem;
+            text-shadow: 1px 2px 20px #fff;
+        }
+        #controlador {
+              padding: 10px 50px;
+              margin: 20px;
+        }
+        #mInput {
+            width:  100%;
+            font-size: 1.65rem;
+            margin: 8px auto;
+            border-radius: 4px;
+            font-family: 'Roboto Mono', monospace;
+        }
+        #noti {
+            background-color: #67c7b940;
+            width: 100% ;
+            height: 40px; 
+            color  : #000;
+            font-weight: 400;
+            text-shadow: 1px 1px #fff;
+            border-radius: 10px;
+            padding: 5px 14px;
+            border: outset 1px #000;
+            font-family: 'Roboto Mono', monospace;
+        }
+        #reloj {
+            border-style: outset;
+            border-width: 1px;
+            border-color: #67c7b940;
+            border-radius: 4px;
+            padding: 3px 12px;
+            font-size: 2.1rem;
+            margin: 27px 6px;
+            width: 300px;
+            background-color: white;
+            font-family: 'Anton', sans-serif;
+        }
+
+
+        
+/* media query para ajsutes */
+@media screen and (max-width: 720px) {
+    
+    #contenedor {
+        height: auto !important;
+    }
+    #controlador {
+        padding: 5px 10px;
+    }
+    #mInput {
+           width: 100% !important;
+    }
+    #noti {
+           width: 100% !important;
+    }
+
+}
+
+    </style>
+     
+    <section id="app">        
+          <!-- // el reloj -->
+         <div id="elReloj" class="container box">
+            <span id="wrap_reloj" >
+                <span id="reloj">0</span>
+                <button class="button is-primary" id="startApp" type="button">START</button>
+            </span>
+         </div>
+
+         <div id="controlador" class="container box">
+            <input type="text" id="mInput" placeholder="Here" class="has-tooltip-active" data-tooltip="Tooltip Text" >
+            <div class="box" id="noti">Puntaje mas alto :  <b>0</b> <strong> Palabras x Minuto.</strong>
+            </div>
+        </div>
+         <!-- fin del contenedor -->
+
+         <!-- // el app -->
+         <div id="pContenedor" class="container">
+             <div class="columns">
+                 <div class="column box">
+                    <p id="parrafo">Aqui esta la cita quie tienes que escribir.<br>
+                                    Mira que tan rapido puedes ir.</p>
+                    <br>
+                    <p><strong id="autor">-Sergio Vivart</strong></p> 
+                 </div>
+             </div>
+         </div>
+    </section>
+    <!-- find e la seccion -->
+
+    <!-- incluimos el jason file  -->
+    <script>
+              // como yo soy malandro cargare el array como si fuerea
+      quotes = [
+                {"quote":"Life isn't about getting and having, it's about giving and being.","author":"Kevin Kruse"},
+                {'quote':'The cost of sanity in this society, is a certain level of alienation.' , 'author' : 'Terence Mckenna'},
+                {"quote":"Whatever the mind of man can conceive and believe, it can achieve.","author":"Napoleon Hill"},
+                {"quote":"Strive not to be a success, but rather to be of value.","author":"Albert Einstein"},
+                {"quote":"You miss 100% of the shots you don't take.","author":"Wayne Gretzky"},
+                {"quote":"I've missed more than 9000 shots in my career. I've lost almost 300 games. 26 times I've been trusted to take the game winning shot and missed. I've failed over and over and over again in my life. And that is why I succeed.","author":"Michael Jordan"},
+                {"quote":"Every strike brings me closer to the next home run.","author":"Babe Ruth"},
+                {"quote":"Definiteness of purpose is the starting point of all achievement.","author":"W. Clement Stone"},
+                {"quote":"We must balance conspicuous consumption with conscious capitalism.","author":"Kevin Kruse"},
+                {"quote":"Life is what happens to you while you're busy making other plans.","author":"John Lennon"},
+                {"quote":"Twenty years from now you will be more disappointed by the things that you didn’t do than by the ones you did do, so throw off the bowlines, sail away from safe harbor, catch the trade winds in your sails.  Explore, Dream, Discover.","author":"Mark Twain"},
+                {"quote":"The most common way people give up their power is by thinking they don’t have any.","author":"Alice Walker"},
+                {"quote":"The mind is everything. What you think you become.","author":"Buddha"},
+                {"quote":"The best time to plant a tree was 20 years ago. The second best time is now.","author":"Chinese Proverb"},
+                {"quote":"An unexamined life is not worth living.","author":"Socrates"},
+                {"quote":"Eighty percent of success is showing up.","author":"Woody Allen"},
+                {"quote":"Your time is limited, so don't waste it living someone else's life.","author":"Steve Jobs"},
+                {"quote":"I am not a product of my circumstances. I am a product of my decisions.","author":"Stephen Covey"},
+                {"quote":"Every child is an artist.  The problem is how to remain an artist once he grows up.","author":"Pablo Picasso"},
+                {"quote":"You can never cross the ocean until you have the courage to lose sight of the shore.","author":"Christopher Columbus"},
+                {"quote":"I've learned that people will forget what you said, people will forget what you did, but people will never forget how you made them feel.","author":"Maya Angelou"},
+                {"quote":"Whether you think you can or you think you can't, you’re right.","author":"Henry Ford"},
+                {"quote":"The two most important days in your life are the day you are born and the day you find out why.","author":"Mark Twain"},
+                {"quote":"Whatever you can do, or dream you can, begin it.  Boldness has genius, power and magic in it.","author":"Johann Wolfgang von Goethe"},
+                {"quote":"The best revenge is massive success.","author":"Frank Sinatra"},
+                {"quote":"People often say that motivation doesn't last. Well, neither does bathing.  That's why we recommend it daily.","author":"Zig Ziglar"},
+                {"quote":"Life shrinks or expands in proportion to one's courage.","author":"Anais Nin"},
+                {"quote":"If you hear a voice within you say 'you cannot paint' then by all means paint and that voice will be silenced.","author":"Vincent Van Gogh"},
+                {"quote":"There is only one way to avoid criticism: do nothing, say nothing, and be nothing.","author":"Aristotle"},
+                {"quote":"Ask and it will be given to you; search, and you will find; knock and the door will be opened for you.","author":"Jesus"},
+                {"quote":"The only person you are destined to become is the person you decide to be.","author":"Ralph Waldo Emerson"},
+                {"quote":"Go confidently in the direction of your dreams.  Live the life you have imagined.","author":"Henry David Thoreau"},
+                {"quote":"When I stand before God at the end of my life, I would hope that I would not have a single bit of talent left and could say, I used everything you gave me.","author":"Erma Bombeck"},
+                {"quote":"Few things can help an individual more than to place responsibility on him, and to let him know that you trust him.","author":"Booker T. Washington"},
+                {"quote":"Certain things catch your eye, but pursue only those that capture the heart.","author":" Ancient Indian Proverb"},
+                {"quote":"Believe you can and you're halfway there.","author":"Theodore Roosevelt"},
+                {"quote":"Everything you’ve ever wanted is on the other side of fear.","author":"George Addair"},
+                {"quote":"We can easily forgive a child who is afraid of the dark; the real tragedy of life is when men are afraid of the light.","author":"Plato"},
+                {"quote":"Teach thy tongue to say, 'I do not know,' and thous shalt progress.","author":"Maimonides"},
+                {"quote":"Start where you are. Use what you have.  Do what you can.","author":"Arthur Ashe"},
+                {"quote":"When I was 5 years old, my mother always told me that happiness was the key to life.  When I went to school, they asked me what I wanted to be when I grew up.  I wrote down 'happy'.  They told me I didn't understand the assignment, and I told them they didn't understand life.","author":"John Lennon"},
+                {"quote":"Fall seven times and stand up eight.","author":"Japanese Proverb"},
+                {"quote":"When one door of happiness closes, another opens, but often we look so long at the closed door that we do not see the one that has been opened for us.","author":"Helen Keller"},
+                {"quote":"Everything has beauty, but not everyone can see.","author":"Confucius"},
+                {"quote":"How wonderful it is that nobody need wait a single moment before starting to improve the world.","author":"Anne Frank"},
+                {"quote":"When I let go of what I am, I become what I might be.","author":"Lao Tzu"},
+                {"quote":"Life is not measured by the number of breaths we take, but by the moments that take our breath away.","author":"Maya Angelou"},
+                {"quote":"Happiness is not something readymade.  It comes from your own actions.","author":"Dalai Lama"},
+                {"quote":"First, have a definite, clear practical ideal; a goal, an objective. Second, have the necessary means to achieve your ends; wisdom, money, materials, and methods. Third, adjust all your means to that end.","author":"Aristotle"},
+                {"quote":"We must believe that we are gifted for something, and that this thing, at whatever cost, must be attained.","author":"Marie Curie"},
+                {"quote":"Too many of us are not living our dreams because we are living our fears.","author":"Les Brown"},
+                {"quote":"If you want to lift yourself up, lift up someone else.","author":"Booker T. Washington"},
+                {"quote":"I have been impressed with the urgency of doing. Knowing is not enough; we must apply. Being willing is not enough; we must do.","author":"Leonardo da Vinci"}
+                ];
+
+        // hooks
+        const doc    = document;
+        const main   = doc.getElementById('app');
+
+        // reactive data hooks
+        const input    = doc.getElementById('mInput');
+        const parrafo  = doc.getElementById('parrafo');
+        const autor    = doc.getElementById('autor');
+
+        // the clock
+        const reloj    = doc.getElementById('reloj');
+        // the notificantions
+        const noti     = doc.getElementById('noti').querySelector('b');
+        const brag     = doc.getElementById('brag');
+        // el boton de empezar.
+        const startApp = doc.getElementById('startApp');
+          
+          // funcion to get number of word per minute
+         function promedioMinuto(cuenta,segundos, cb)
+         {
+              let  buffer = (parseInt(cuenta) / parseInt(segundos)) * 60;
+              cb(Math.floor(parseFloat(buffer)));
+         }
+
+        let time; // interval hook
+        let segundos = 0;  // seconds pass
+
+        // el objeto como tal
+         let app = { 
+             // las propiedades
+             cita       : '', // la cita
+             autor      : '', // el autor 
+             index      : 0,  // numero id en jason
+             clean      : [], // las paralbras sin espacios
+             spans      : [], // arrayc on los spans
+             cuenta     : 0,  // los caracters correctos
+             hScore     : 0,  // el score mas alto
+             init      : function( cita, autor ,index ){ // funcion para hacer set
+                     // set properties
+                    this.cita   = cita;
+                    this.autor  = autor;
+                    this.index  = index;
+             },
+             agregar  : function( arr ) {  // agregamo un array a la app
+                arr.forEach( (ele) => {
+                       if(ele.trim() !== '') // si tiene algo
+                       {  
+                            this.clean.push(   ele.replace("’", "'") ); // agregamos y reemplazamops caracteres raros
+                       }
+                 }); 
+             },
+             makeSpans : function( hook ){ // make the spans
+                  this.clean.forEach( (ele) => {  // the loop 
+                       let span = doc.createElement('span'); // create span
+                       span.textContent  =  ' ' + ele.toString(); // add text
+                       this.spans.push(span); // add hook to array
+                       hook.append(span); // add the thing to the 'parrafo'
+                  });
+             },             
+             vaciar    : function() {  // Vaciamos todo  
+                 this.cita = ''; this.autor = ''; this.clean = [];
+                 this.index = 0; this.cuenta = 0; this.spans = [];
+             }
+       };
+       // fin del
+
+    // Activate APP
+    startApp.addEventListener('click', (e)=>{
+
+         //focus,clean and reset. 
+        input.value = '';
+        parrafo.innerHTML = '';  
+        input.disabled = false;
+        startApp.disabled = true;
+        // slecta dn focus
+        input.focus();
+        input.select();
+       
+        // seleccionamos un item en el arraay en base a un numero randond dee la longitud del array
+        var numero =  Math.floor(Math.random() * parseInt(quotes.length))
+        let obj   = quotes[numero];
+       
+        // set the goodies
+        app.init( obj.quote , obj.author , numero); // inicialismoa el objeto
+        app.agregar(obj.quote.split(' ')); // add the array for cleaning
+        autor.textContent   = '- ' + app.autor; // set text of author
+        input.placeholder = app.clean[0]; // set placeholder
+        app.makeSpans( parrafo );  // make the spans
+
+                             // launch clock
+         time  =  setInterval( (event) => {
+         segundos++; // up seconds
+         reloj.textContent = segundos.toString(); // update context
+         } ,1000);
+                        // fin de la funcion get data
+         
+         // funcin evento para el teclado en el input
+         input.addEventListener("keydown", function(event) {
+              if(event.keyCode == 32 || event.keyCode == 13) {  // en caos de un enter                             
+                                // test the value
+                               switch( input.value )
+                               {
+                                   case app.clean[0]:  // si conciden
+                                            input.placeholder = app.clean[1]; // show the next one
+                                            app.spans[app.cuenta].style.background = '#dbdbdb';
+                                            app.cuenta++;   // + this
+                                            input.style.border = '1px solid green'; // change
+                                            input.value = ''; // clean
+                                            app.clean.splice(0,1); // remove from object
+                                            // si el array esta vacio
+                                            if( app.clean.length <= 0)
+                                            {
+                                                reloj.textContent = '0';   // contenido reloj
+                                                // sacamos el promedio por minuto
+                                                promedioMinuto( app.cuenta , segundos , (data)=>{
+                                                    input.value = data + ' words per minute.';
+                                                    if(  data > app.hScore  ) // test for hioghness
+                                                    {
+                                                        app.hScore       = parseInt(data); //agregamos
+                                                        noti.textContent = data.toString();
+                                                    }
+                                                    segundos = 0; // seteamos segundos
+                                                    startApp.disabled = false; // activate button
+                                                    app.vaciar(); // take off properties
+                                                    clearInterval(time); // clear th interval
+                                                });
+                                            }   
+                                   break;
+                                   default:  // otherwise
+                                      input.style.border = '1px solid red';
+                                } 
+                                event.preventDefault(); // prevenimos el espaciado.  
+               } 
+            });
+         });
+
+    </script>
+    
+
+</body>
+</html>

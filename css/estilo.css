@@ -1,0 +1,222 @@
+/* las particulas */
+#contenedor {
+    z-index  : 1 !important;
+    padding  : 0;
+    height   : 100%;
+    margin   : 0;
+    display  : block;
+    position : relative;
+    background-image    : url(../img/texturas/cream-pixels.png), radial-gradient(circle, rgba(2, 0, 36, 1) 0, rgba(0, 212, 255, 1) 64%, rgba(9, 9, 121, 1) 80%);
+    background-position : 12% -7%;
+}
+
+/* las aprticulas */
+#particles-js {
+    background: transparent !important;
+    height   : 99%;
+    width    : 100%;
+    padding  : 0;
+    margin   : 0;
+    color    : #000;
+    position : absolute;
+    top      : 0px;
+    left     : 0px;
+    z-index  : 333 !important;
+}
+
+/* el wrap */
+#wrap {
+    z-index: 4444 !important;
+    margin : 0 auto;
+    /* padding: 0 5rem !important;  */
+    height: 100%;
+    max-height: 100%;
+    width: 100% !important;
+    border: 1px solid #fff;
+}
+
+
+/* el intro */
+#intro {
+    border: 1px solid rgb(136, 109, 109);
+    background : #00000042;
+    z-index: 555 !important;
+    padding: 0;
+    margin: 0 auto;
+    position: relative;
+    display: block;
+    height: 40% !important;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    text-align: center;
+}
+
+
+#intro  h1 {
+    font-family: 'Lobster', cursive;
+    font-size: 1.8rem;
+    color: #fff;
+    text-shadow: 1px 2px 6px #000;
+    font-weight: 400;
+    font-stretch: expanded;
+    margin: 25px auto;
+    display: flex;
+    width: 80%;
+    position: relative;
+    /* padding: 5px; */
+    background: transparent;
+    padding-top: 0;
+    height: 100px;
+    min-height: 100px;
+    text-align: center;
+}
+
+#intro img {
+    height: 12rem;
+    width: 14rem;
+    margin: 25px auto 0 auto;
+    padding: 0;
+    background: transparent;
+    display: flex;
+    border-radius: 100% !important;
+    border : 1px solid rgb(136, 109, 109);
+    box-shadow: 1px 1px 5px 2px black;
+    
+}
+
+#intro .iSocial {
+    color : white;
+    font-size: 2.48rem;
+    /* display: block; */
+    margin-left: 10px;
+     text-shadow:  2px 4px 22px #000;
+}
+
+
+/* el mensaje */
+#mensaje {
+    /* background : rgba(255, 255, 255, 0.56); */
+    background : transparent;
+    z-index: 656 !important;
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 20% !important;
+}
+
+
+#mensaje h1 {
+    font-family: 'ZCOOL QingKe HuangYou', cursive;
+    font-size: 1.32rem;
+    font-weight: 400;
+    font-stretch: expanded;
+    color: #fff;
+    text-shadow: 1px 10px 16px #444;
+    text-align: center;
+    margin : 20px auto;
+}
+
+#mensaje img {
+    height: 67px;
+}
+
+
+/* la aventura */
+#aventura {
+    height: 40%;
+    background : #00000042;
+    z-index: 656 !important;
+    position: relative;
+    display: block;
+    border: 1px solid rgb(136, 109, 109);
+    padding : 30px 6px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+ 
+/* las opciones */
+ .opcion {
+     border : 1px solid #fff;
+     border-radius: 10px;
+     background-color: #fff;
+     padding    : 10px;
+     height     : 190px;
+     margin     : 0 auto;
+     display    : block;
+     position   : relative;
+     box-shadow : 2px 3px 10px rgba(255,0,255,0.3);
+     width      : 85%;
+     transition : all 400ms ease-in-out;
+ }
+ .opcion:hover {
+    box-shadow: 3px 5px 15px 8px #fff;
+ }
+
+ .opcion img {
+      height: 55%;
+      padding: 0;
+      text-align: center;
+      transition: all ease-in-out 500ms;
+      margin: 0 auto;
+      display: flex;
+    }
+
+ .opcion h2 {
+    font-family: 'ZCOOL QingKe HuangYou', cursive;
+     margin:  10px auto;
+     text-align: center;
+     font-size: 1.84em;
+     color: #000;
+     line-height: 22px;
+     text-shadow: 1px 2px 12px rgba(255,255,255);
+ }
+
+/* /// el footer */
+#derechos_foot  {
+    text-align: center;
+    font-size: 1.32rem;
+    align-items: center;
+    font-family: 'Lobster', cursive;
+    color: #fff;
+    text-shadow: 1px 3px 5px #000;
+}
+
+ /* On screens that are 992px or less, set the background color to blue */
+@media screen and (max-width: 700px) {
+    #contenedor {
+
+        height: auto !important;
+    }
+    
+    /* // el mensjae de introp */
+    #intro  h1 {
+         font-size: 1.37em;
+         text-align: center;
+         font-stretch: expanded;
+    }
+    
+    /* #intro #cv_link {
+       display: none !important;
+    } */
+
+    #intro img  {
+        height: 9rem;
+        width: 9rem;
+    } 
+
+    /* #intro .iSocial {
+        display: none;
+    } */
+    /* la app.html */
+    #wrap {
+        padding: 0;
+    }
+    .opcion {
+        margin : 14px auto;
+        width: 84%;
+    }
+    .opcion img {
+        margin: 0 auto;
+        display: flex;
+    }
+  }
