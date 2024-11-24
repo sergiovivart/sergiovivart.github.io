@@ -2,22 +2,13 @@ $(document).foundation(); // lanzamos foundation
 
     // las opciones
       var options = {
-        strings: ['Soy Sergio, tengo 4 años de experiencia desarrollando aplicaciones web.<br>-PHP | MySQL<br>-JavaScript | Node.js'],
+        strings: ['Soy Sergio, tengo 5 años de experiencia desarrollando aplicaciones web.<br>-PHP | Laravel | SQL<br>-JavaScript | ReactJs | NodeJs'],
         // loop : true,
         typeSpeed: 27
       };
 
-      // // las opciones
-      // var poderes = {
-      //   strings: ['-PHP | MySQL<br>-JavaScript | Node.js | Express<br>-Python | Flask'],
-      //   typeSpeed: 17
-      // };
-
-
       // cargamos y lanzamos
       var opciones = new Typed('.titulo_intro', options);
-      // var poderes = new Typed('.titulo_poderes', poderes);
-
      // cargamos el js de foundation
      $(document).foundation();
        
