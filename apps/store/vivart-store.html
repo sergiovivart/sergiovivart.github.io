@@ -1,0 +1,113 @@
+<!doctype html>
+<html class="no-js" lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <title>Vivart Store</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster|Poppins|ZCOOL+QingKe+HuangYou&display=swap">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- los estilos -->
+    <link rel="stylesheet" href="../../css/foundation.css?v=10100101010">
+    <link rel="stylesheet" href="../../css/apps.css?v=10100101010">
+  </head>
+  <body>
+
+    <style>
+      .titulo {
+        font-family: 'ZCOOL QingKe HuangYou', cursive;
+        margin: 10px auto;
+        text-align: center;
+        font-size: 1.84em;
+        color: #fff;
+        line-height: 22px;
+        text-shadow: 1px 2px 12px rgba(0, 0, 0);
+        margin: 2rem 0 2rem 0;
+      }
+
+      .targeta {
+        background-color: white;
+        font-family: 'ZCOOL QingKe HuangYou', cursive;
+        width: 80%;
+        margin : 0 auto;
+        border-radius: 1rem;
+        text-align: center !important;
+        padding-bottom: 1rem;
+
+      }
+
+      .targeta h4 {
+        font-family: 'ZCOOL QingKe HuangYou', cursive;
+      }
+    </style>
+
+    <div id="contenedor">
+      <div class="row">
+        <div class="container">
+          <h2 class="titulo">Tienda</h2>
+        </div>
+      </div>
+      
+      <div id="itemListContenedor" class="container">
+        <div class="" id="root"></div>
+      </div>
+    </div>
+    <!-- fin del contenedor -->
+
+    <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+    
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js" crossorigin></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script type="text/babel">
+
+      // los hooksq ue usareusaremos
+      const { useState, useEffect } = React;
+    
+      const App = () => {
+        const [products, setProducts] = useState([]);
+    
+        useEffect(() => {
+          fetch('http://127.0.0.1:8000/api/shop')
+            .then(response => response.json())
+            .then(data => { 
+              setProducts(data);
+              console.log(data); 
+
+            })
+            .catch(error => console.error('Error fetching products:', error));
+        }, []);
+
+    
+        return (
+            <div className="row">
+              <div className="columns small-12 medium-6 large-6">
+                {products.map(product => (
+                  <div key={product.id} className="cell">
+                    <div className="card targeta">
+                      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT6lE2mP5G1CQEgaP9D4yhB3wFJpMVXq-SA5w&s" alt={product.name} />
+                      <div className="card-section">
+                        <a href={`vivart-store-producto.html?id=${product.id}`}>
+                          <h4>{product.nombre}</h4>  
+                        </a>
+                        <p>{product.descripcion}</p>
+                        <p>${product.precio}</p>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          );
+
+      };
+    
+      ReactDOM.render(<App />, document.getElementById('root'));
+    </script>
+    
+  </body>
+</html>
