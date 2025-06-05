@@ -2,7 +2,7 @@
 #contenedor {
     z-index  : 1111 !important;
     padding  : 0;
-    height   : 100%;
+    /* height   : 100%; */
     margin   : 0;
     display  : block;
     position : relative;
@@ -38,7 +38,7 @@
      position   : relative;
      box-shadow : 2px 3px 10px rgba(255,0,255,0.3);
      width      : 67%;
-     height     : 310px;
+     height     : 11s5px;
      transition : all 400ms ease-in-out;
  }
  .opcion:hover {
@@ -47,6 +47,7 @@
 
  .opcion img {
       height: 50% !important;
+      width: 50% !important;
       padding: 0;
       text-align: center;
       transition: all ease-in-out 500ms;
@@ -64,9 +65,7 @@
      text-shadow: 1px 2px 12px rgba(255,255,255);
  }
 
- .opcion > h2  > strong {
-      
- }
+ /* .opcion > h2  > strong {} */
 
 /* /// el footer */
 #derechos_foot  {
