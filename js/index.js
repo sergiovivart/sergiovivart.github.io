@@ -2,7 +2,7 @@ $(document).foundation(); // lanzamos foundation
 
     // las opciones
       var options = {
-        strings: ['Soy Sergio, tengo 5 años de experiencia desarrollando aplicaciones web.<br>-PHP | Laravel | SQL<br>-JavaScript | ReactJs | NodeJs'],
+        strings: ['Soy Sergio, tengo 5 años de experiencia desarrollando aplicaciones web.<br>-PHP | Laravel | SQL<br>-JavaScript | ReactJs | NodeJs <br>-C# .Net Core'],
         // loop : true,
         typeSpeed: 27
       };
